@@ -1,13 +1,13 @@
 import express from 'express'
 import {config} from 'dotenv'
 import { GetUsersController } from './controllers/get-users/get-users'
-import { MongoGetUsersRepository } from './repositories/mongo-get-users'
+import { MongoGetUsersRepository } from './repositories/get-users/mongo-get-users'
 import { MongoClient } from './database/mongo'
 
 
 const main = async () => {
     config();
-    
+
     await MongoClient.conect()
 
     const app = express()
